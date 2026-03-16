@@ -1,5 +1,5 @@
 - name: Variable from Inventory
-  hosts: all
+  hosts: TEST
   tasks:
     - name: Print URL
       ansible.builtin.debug:
