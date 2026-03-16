@@ -21,3 +21,13 @@
   roles:
     - sample
 
+- name: Variable from tasks
+  hosts: TEST
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: TASK1 - {{ TASK1 }}, TASK2 - {{ TASK2 }}
+      vars:
+        TASK1: coding
+        TASK2: compiling
+
