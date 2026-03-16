@@ -3,7 +3,7 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-        msg: URL - {{ URL }}, COMPONENT - {{ COMPONENT1 }}
+        msg: URL - {{ URL }}, COMPONENT - {{ COMPONENT }}
 
 - name: Variable from playbook
   hosts: TEST
