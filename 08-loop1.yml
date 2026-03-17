@@ -1,0 +1,13 @@
+- name: Variable from Inventory
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+    - name: Install multiple packages
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - nginx
+        - git
+        - curl
