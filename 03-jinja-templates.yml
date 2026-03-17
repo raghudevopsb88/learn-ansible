@@ -1,6 +1,8 @@
 - name: Variable from Inventory
   hosts: localhost
   connection: local
+  vars:
+    students: { name: Steve, course: DevOps }
   tasks:
     - name: Copy file
       ansible.builtin.copy:
@@ -11,4 +13,9 @@
       ansible.builtin.template:
         src: sample.txt.j2
         dest: /tmp/h2.txt
+
+    - name: Copy template - with map
+      ansible.builtin.template:
+        src: sample1.txt.j2
+        dest: /tmp/h3.txt
 
