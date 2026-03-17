@@ -1,0 +1,13 @@
+- name: Variable from Inventory
+  hosts: TEST
+  tasks:
+    - name: Copy file
+      ansible.builtin.file:
+        src: sample.txt
+        dest: /tmp/h1.txt
+
+    - name: Copy template
+      ansible.builtin.template:
+        src: sample.txt.j2
+        dest: /tmp/h2.txt
+
