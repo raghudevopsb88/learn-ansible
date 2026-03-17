@@ -11,3 +11,10 @@
         - nginx
         - git
         - curl
+    - name: Create multiple users
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        uid: "{{ item.uid }}"
+      loop:
+        - { name: "john", uid: 2001 }
+        - { name: "david", uid: 2002 }
