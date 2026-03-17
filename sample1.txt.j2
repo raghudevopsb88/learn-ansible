@@ -1,3 +1,9 @@
 Hello {{ student.name }},
   Welcome to {{ student.course }} Training
+{% if student.course == "DevOps" %}
+  Fee : 100$
+{% else %}
+  Fee : 50$
+{% endif %}
+
 
