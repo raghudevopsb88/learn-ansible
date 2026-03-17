@@ -1,5 +1,6 @@
 - name: Variable from Inventory
-  hosts: TEST
+  hosts: localhost
+  connection: local
   tasks:
     - name: Copy file
       ansible.builtin.file:
