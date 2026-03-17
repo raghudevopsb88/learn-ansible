@@ -1,0 +1,8 @@
+- name: Variable from Inventory
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print a Message
+      ansible.builtin.debug:
+        msg: ansible_facts
+
