@@ -4,5 +4,5 @@
   tasks:
     - name: Print a Message
       ansible.builtin.debug:
-        msg: ansible_facts
+        msg: "{{ ansible_facts }}"
 
