@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-    students: { name: Steve, course: DevOps }
+    student: { name: Steve, course: DevOps }
   tasks:
     - name: Copy file
       ansible.builtin.copy:
