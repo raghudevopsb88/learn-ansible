@@ -6,3 +6,8 @@
       ansible.builtin.debug:
         msg: "{{ ansible_facts }}"
 
+    - name: Config file update
+      ansible.builtin.copy:
+        content: "IP: {{ansible_facts['default_ipv4']['address']}}"
+        dest: /tmp/ip
+
